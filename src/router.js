@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Solar from '@/components/Solar.vue'
+import Sol from '@/views/Sol.vue'
 //Import new component
 //import AdjForNoun from '@/views/AdjForNoun'
 
@@ -9,8 +9,8 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/components/solar',
-      name: 'Solar',
+      path: '/sol',
+      name: 'Sol',
       component: Solar
     },
     {

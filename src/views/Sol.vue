@@ -1,17 +1,22 @@
 <template>
-  <div class="rhymesaurus">
+  <div class="sol">
      <h2>Solar Site</h2>
-     <p>
+     <!-- <p>
        Where is the Space Station?
-       </P>
-    <form v-on:submit.prevent="findWords">
-      <!--<p>Find rhymes for <input type="text" v-model="rhyme"> related to <input type="text" v-model="phrase">--> <p><button type="submit">Search</button></p>
+       </P>-->
+    <form v-on:submit.prevent="findStation">
+      <!--<p>Find rhymes for <input type="text" v-model="rhyme"> related to <input type="text" v-model="phrase">--> <p><button type="submit">Where is the Space Station?</button></p>
     </form>
-    
+
+    <!--need to clean up results...splice?-->
     <ul class="results" v-if="results && results.length > 0">
       
-      <li class="item" v-for="(item, index) of results" :key="index">
-        <p><strong>{{item.word}}</strong></p>
+      <li class="latitude" v-for="(item, index) of results" :key="index">
+        <p><strong>{{item.latitude}}</strong></p>
+        <p>{{item.score}}</p>
+      </li>
+      <li class="longitude" v-for="(item, index) of results" :key="index">
+        <p><strong>{{item.longitude}}</strong></p>
         <p>{{item.score}}</p>
       </li>
     </ul>
@@ -29,6 +34,8 @@
     </ul>
     <div>{{results}}</div>
   </div>
+
+  <!--add 2nd div for sunrise api-->
 </template>
 
 <script>
@@ -45,7 +52,7 @@ export default {
     }
   }, 
   methods: {
-  findWords: function() {
+  findStation: function() {
     axios.get('http://api.open-notify.org/iss-now.json?callback', {
     })
     .then(response => {
@@ -61,7 +68,7 @@ export default {
 </script>
 
 <style scoped>
-.rhymesaurus {
+.sol {
   font-size: 1.4rem;
 }
 
