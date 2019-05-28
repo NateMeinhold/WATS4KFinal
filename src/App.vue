@@ -6,13 +6,15 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from './views/Sol.vue'
+//if I try to import anything else, I lose all my text
 
 export default {
   name: 'app',
   components: {
     HelloWorld
-  }
+  }, 
+
 }
 </script>
 
