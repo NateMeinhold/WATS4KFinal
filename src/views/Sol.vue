@@ -15,7 +15,9 @@
     <div class="map">
       <p>This is where the (possible) map could go</p>
       </div>
-
+ <p>
+       <router-link to="/views/sunrise">Sunrise App</router-link>
+       </P>
     <!-- <div class="sunset"><p>this is where the sunset thing will go<button>click</button></p></div> -->
   </div>
 
