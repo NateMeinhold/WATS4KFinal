@@ -1,18 +1,18 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img alt="Vue logo" src="./assets/logo.png"> 
+    <Sol msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './views/Sol.vue'
-//if I try to import anything else, I lose all my text
+import Sol from './views/Sol.vue'
+//import Sunrise from './views/Sunrise.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Sol, 
   }, 
 
 }
