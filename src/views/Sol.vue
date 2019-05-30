@@ -18,10 +18,9 @@
  <p>
        <router-link to="/views/sunrise">Sunrise App</router-link>
        </P>
-    <!-- <div class="sunset"><p>this is where the sunset thing will go<button>click</button></p></div> -->
+    <div class="sunset"><p>what time of day is it there?<button>click</button></p></div> 
   </div>
 
-  <!--2nd div for sunrise api-->
 </template>
 
 <script>
@@ -36,7 +35,7 @@ export default {
   },
   mounted: function() {
     axios
-        .get("http://api.open-notify.org/iss-now.json?callback", {})
+        .get("https://api.open-notify.org/iss-now.json?callback", {})
         .then(response => {
           this.results = response.data;
         })
@@ -45,6 +44,26 @@ export default {
         });
   },
 };
+// export default {
+//   name: 'Sunrise',
+//   data () {
+//     return {
+//       posts: [],
+//       errors: []
+//     }
+//   },
+//   created () {
+//     axios.get(`https://api.sunrise-sunset.org/json?lat=36.7201600&lng=-4.4203400`)
+//     .then(response => {
+//       this.posts = response.data
+//     })
+//     .catch(e => {
+//       this.errors.push(e)
+//     })
+//   }
+// }
+
+
 </script>
 
 <style scoped>
