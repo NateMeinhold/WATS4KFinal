@@ -21,7 +21,7 @@
     <!-- <div class="sunset"><p>this is where the sunset thing will go<button>click</button></p></div> -->
   </div>
 
-  <!--add 2nd div for sunrise api-->
+  <!--2nd div for sunrise api-->
 </template>
 
 <script>
