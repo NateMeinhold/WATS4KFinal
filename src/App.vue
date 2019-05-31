@@ -7,7 +7,7 @@
 
 <script>
 import Sol from './views/Sol.vue'
-//import Sunrise from './views/Sunrise.vue'
+import Sunrise from './views/Sunrise.vue'
 
 export default {
   name: 'app',
