@@ -8,8 +8,8 @@
     <p>Where is the Internal Space Station right now?</p>
 
     <div class ="results">
-      <div v-if="results !== null"><p>Longitude: {{results.iss_position.longitude}} </p>
-      <p>Latitude:{{results.iss_position.latitude}} </p></div>
+      <div v-if="iss_position !== null"><p>Longitude: {{iss_position.longitude}} </p>
+      <p>Latitude:{{iss_position.latitude}} </p></div>
 
     </div>
 
@@ -17,7 +17,7 @@
       <p>This is where the (possible) map could go</p>
       </div>
  <p>
-       <router-link to="/views/sunrise">Sunrise App</router-link>
+       <!-- <router-link to="/views/sunrise">Sunrise App</router-link> -->
        </P>
     <div class="sunset"><p>what time of day is it there?<button>click</button></p></div> 
   </div>
@@ -32,12 +32,13 @@ export default {
   data() {
     return {
       results: null,
-      errors: []
+      errors: [],
+      iss_position: null
     };
   },
   mounted: function() {
     axios
-        .get("//api.open-notify.org/iss-now.json?callback", {
+        .get("//api.open-notify.org/iss-now.json?callback=?", {
           // params:{
           //   lat: "45.0", 
           //   lon: "-122.3"
@@ -45,6 +46,7 @@ export default {
         })
         .then(response => {
           this.results = response.data;
+          this.iss_position = this.results.iss_position
         })
         .catch(error => {
           this.errors.push(error);
