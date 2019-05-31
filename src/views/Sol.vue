@@ -8,8 +8,8 @@
     <p>Where is the Internal Space Station right now?</p>
 
     <div class ="results">
-      <div v-if="results !== null"><p>Longitude: {{results.iss_position.longitude}} </p>
-      <p>Latitude:{{results.iss_position.latitude}} </p></div>
+      <div v-if="results !== null"><p>Longitude: {{results.longitude}} </p>
+      <p>Latitude:{{results.latitude}} </p></div>
 
     </div>
 
@@ -38,11 +38,12 @@ export default {
   },
   mounted: function() {
     axios
-        .get("http://api.open-notify.org/iss-now.json?callback", {
-          // params:{
-          //   lat: "45.0", 
-          //   lon: "-122.3"
-          // }
+        .get("https://api.wheretheiss.at/v1/satellites/25544", {
+          // http://api.open-notify.org/iss-now.json?callback
+          // // params:{
+          // //   lat: "45.0", 
+          // //   lon: "-122.3"
+          // // }
         })
         .then(response => {
           this.results = response.data;
