@@ -17,7 +17,7 @@
     </div>
 
     <div class="map">
-      <p>Link to the Map view</p>
+      <p>This is where the (possible) map could go</p>
       </div>
       <div>
  

@@ -35,7 +35,7 @@ export default {
   },
   mounted: function() {
     axios
-        .get("http://api.open-notify.org/iss-now.json?callback", {})
+        .get("https://api.wheretheiss.at/v1/coordinates/{{results.longitude}},{{results.longitude}}", {})
         .then(response => {
           this.results = response.data;
         })
@@ -44,6 +44,29 @@ export default {
         });
   },
 };
+
+// export default {
+//   name: 'Sunrise',
+//   data () {
+//     return {
+//       posts: [],
+//       errors: []
+//     }
+//   },
+//   created () {
+//     axios.get(`https://api.wheretheiss.at/v1/coordinates/{{results.longitude}},{{results.longitude}}`)
+//     .then(response => {
+//       this.posts = response.data
+//     })
+//     .catch(e => {
+//       this.errors.push(e)
+//     })
+//   }
+// }
+
+
+
+
 // export default {
 //   name: 'Sunrise',
 //   data () {
