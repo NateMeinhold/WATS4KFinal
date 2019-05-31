@@ -30,7 +30,8 @@ export default {
   name: "Sol",
   data() {
     return {
-      results: null
+      results: null,
+      errors: []
     };
   },
   mounted: function() {
@@ -53,7 +54,7 @@ export default {
 //     }
 //   },
 //   created () {
-//     axios.get(`https://api.sunrise-sunset.org/json?lat=36.7201600&lng=-4.4203400`)
+//     axios.get(`https://api.sunrise-sunset.org/json?lat={{results.iss_position.latitude}}&lng={{results.iss_position.longitude}}`)
 //     .then(response => {
 //       this.posts = response.data
 //     })
