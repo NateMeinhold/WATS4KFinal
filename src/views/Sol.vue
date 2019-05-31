@@ -21,7 +21,7 @@
       </div>
       <div>
  
-        <p><router-link to="/views/sunrise">See It on the map!</router-link> </p>
+        <p><router-link to="/views/map">See It on the map!</router-link> </p>
        </div>
     <!-- <div class="sunset"><p>what time of day is it there?<button>click</button></p></div>  -->
   </div>

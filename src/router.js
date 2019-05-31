@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Sol from '@/views/Sol.vue'
 //Import new component
 import Sunrise from '@/views/Sunrise'
+import Map from '@/views/Map'
 
 Vue.use(Router)
 
@@ -14,9 +15,11 @@ export default new Router({
       component: Sol
     },
     {
-      path: '/sunrise',
-      name: 'sunrise',
-      component: Sunrise
+      path: '/map',
+      name: 'map',
+      component: Map
     }, 
   ]
 })
+
+
