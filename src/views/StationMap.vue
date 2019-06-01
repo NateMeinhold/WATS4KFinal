@@ -1,6 +1,6 @@
 <template>
-  <div class="map">
-    <h2>Solar Site</h2>
+  <div class="stationMap">
+    <h2>Station Map</h2>
 
     <form v-on:submit.prevent="findStation">
       <p></p>
@@ -17,11 +17,11 @@
     </div>
 
     <div class="map">
-      <p>This is where the (possible) map could go</p>
+      <p>Link to the Map view</p>
       </div>
       <div>
  
-        <p><router-link to="/views/sol">See It on the map!</router-link> </p>
+        <p><router-link to="/views/map">See It on the map!</router-link> </p>
        </div>
     <!-- <div class="sunset"><p>what time of day is it there?<button>click</button></p></div>  -->
   </div>

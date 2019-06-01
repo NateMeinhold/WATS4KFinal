@@ -1,20 +1,22 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/img/4K-final-top.jpg"> 
-    <!-- <img alt="Vue logo" src="./assets/logo.png">  -->
     <Sol msg="Welcome to Your Vue.js App"/>
+    <!-- <router-view/> -->
   </div>
 </template>
 
 <script>
 import Sol from './views/Sol.vue'
-import Sunrise from './views/Sunrise.vue'
-import Map from './views/Map.vue'
+// import Sunrise from './views/Sunrise.vue'
+// import Map from './views/Map.vue'
+import StationMap from './views/StationMap.vue'
 
 export default {
   name: 'app',
   components: {
     Sol, 
+    StationMap,
   }, 
 
 }
